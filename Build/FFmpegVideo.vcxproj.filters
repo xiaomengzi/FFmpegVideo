@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Depends">
+      <UniqueIdentifier>{13e79d4e-ba59-495d-a68c-940485c74d8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{be4d40d2-c79e-487f-989d-f2df6ab839f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Business">
+      <UniqueIdentifier>{46e15fa0-bc6e-4a8f-9c85-490cffe4f648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\UI">
+      <UniqueIdentifier>{dd73b64b-1d03-467a-b0aa-8264df035e27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Resource Files">
+      <UniqueIdentifier>{b7c0935d-24dc-4f1e-b852-3aff7bfad81f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\UI\Form Files">
+      <UniqueIdentifier>{e24b8fb2-14c5-4ce2-a40c-b73578adc20e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\Source\UI\FFmpegVideo.ui">
+      <Filter>Source\UI\Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\UI\FFmpegVideo.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\UI\main.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\Source\UI\FFmpegVideo.h">
+      <Filter>Source\UI</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="..\Source\UI\FFmpegVideo.qrc">
+      <Filter>Source\Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+</Project>
