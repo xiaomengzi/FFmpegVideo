@@ -1,2 +1,12 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# User-specific files
+*.suo
+*.user
+*..VC.db
+
+# Visual Studo 2015 cache/options directory
+.vs/
+
+# Build results
