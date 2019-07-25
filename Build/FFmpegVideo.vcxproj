@@ -55,7 +55,7 @@
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\GeneratedFiles;..\Source\Busines;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -67,11 +67,12 @@
       <AdditionalLibraryDirectories>$(SolutionDir)..\Depends\FFmepeg\lib;$(SolutionDir)..\Depends\SDL2\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <QtMoc>
       <OutputFile>$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\GeneratedFiles;..\Source\Busines;%(AdditionalIncludeDirectories)</IncludePath>
       <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
     </QtMoc>
     <QtUic>
@@ -81,13 +82,17 @@
     <QtRcc>
       <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
       <OutputFile>$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <QmlCacheOutputFile>$(ProjectDir)GeneratedFiles\%&lt;Filename&gt;_%&lt;Suffix&gt;.cpp</QmlCacheOutputFile>
+      <QmlCacheFilteredFile>$(ProjectDir)GeneratedFiles\%(Filename)_qmlcache.qrc</QmlCacheFilteredFile>
+      <QmlCacheFilteredOutputFile>$(ProjectDir)GeneratedFiles\qrc_%(Filename)_qmlcache.cpp</QmlCacheFilteredOutputFile>
+      <QmlCacheLoaderFile>$(ProjectDir)GeneratedFiles\qmlcache_loader.cpp</QmlCacheLoaderFile>
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\GeneratedFiles;..\Source\Busines;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -98,11 +103,12 @@
       <AdditionalLibraryDirectories>$(SolutionDir)..\Depends\FFmepeg\lib;$(SolutionDir)..\Depends\SDL2\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <QtMoc>
       <OutputFile>$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\GeneratedFiles;..\Source\Busines;%(AdditionalIncludeDirectories)</IncludePath>
       <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
     </QtMoc>
     <QtUic>
@@ -112,20 +118,48 @@
     <QtRcc>
       <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
       <OutputFile>$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <QmlCacheOutputFile>$(ProjectDir)GeneratedFiles\%&lt;Filename&gt;_%&lt;Suffix&gt;.cpp</QmlCacheOutputFile>
+      <QmlCacheFilteredFile>$(ProjectDir)GeneratedFiles\%(Filename)_qmlcache.qrc</QmlCacheFilteredFile>
+      <QmlCacheFilteredOutputFile>$(ProjectDir)GeneratedFiles\qrc_%(Filename)_qmlcache.cpp</QmlCacheFilteredOutputFile>
+      <QmlCacheLoaderFile>$(ProjectDir)GeneratedFiles\qmlcache_loader.cpp</QmlCacheLoaderFile>
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtUic Include="..\Source\UI\FFmpegVideo.ui" />
+    <QtUic Include="..\Source\UI\VideoDisplayWidget.ui">
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Source\Busines\FFmpegLogic.cpp" />
     <ClCompile Include="..\Source\UI\FFmpegVideo.cpp" />
     <ClCompile Include="..\Source\UI\main.cpp" />
+    <ClCompile Include="..\Source\UI\VideoDisplayWidget.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="..\Source\UI\FFmpegVideo.h" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="..\Source\UI\FFmpegVideo.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\Source\UI\VideoDisplayWidget.h">
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\GeneratedFiles</IncludePath>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\GeneratedFiles</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Depends\FFmepeg\include\libswresample\swresample.h" />
+    <ClInclude Include="..\Depends\FFmepeg\include\libswscale\swscale.h" />
+    <ClInclude Include="..\Source\Busines\FFmpegLogic.h">
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\GeneratedFiles</IncludePath>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\Depends;$(SolutionDir)..\Depends\FFmepeg\include;$(SolutionDir)..\Depends\SDL2\include;$(SolutionDir)..\Source\Business;$(SolutionDir)..\Source\UI;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles;.;$(QTDIR)\include;$(SolutionDir)..\Bin\$(Platform)\$(Configuration)\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;.\GeneratedFiles</IncludePath>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

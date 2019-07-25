@@ -19,9 +19,31 @@
     <Filter Include="Source\UI\Form Files">
       <UniqueIdentifier>{e24b8fb2-14c5-4ce2-a40c-b73578adc20e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Depends\FFmepeg">
+      <UniqueIdentifier>{7d140961-1228-4f11-aa69-ca69d3d02863}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Depends\FFmepeg\libswresample">
+      <UniqueIdentifier>{0576858f-6e27-4bc7-9ee5-a9f7fb18a319}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Depends\FFmepeg\libswscale">
+      <UniqueIdentifier>{f2682402-7403-47df-ae68-c09dcabcc410}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="..\Source\UI\FFmpegVideo.ui">
+      <Filter>Source\UI\Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\Source\UI\VideoDisplayWidget.ui">
       <Filter>Source\UI\Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -32,9 +54,18 @@
     <ClCompile Include="..\Source\UI\main.cpp">
       <Filter>Source\UI</Filter>
     </ClCompile>
+    <ClCompile Include="..\Source\UI\VideoDisplayWidget.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Busines\FFmpegLogic.cpp">
+      <Filter>Source\Business</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="..\Source\UI\FFmpegVideo.h">
+      <Filter>Source\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\Source\UI\VideoDisplayWidget.h">
       <Filter>Source\UI</Filter>
     </QtMoc>
   </ItemGroup>
@@ -42,5 +73,16 @@
     <QtRcc Include="..\Source\UI\FFmpegVideo.qrc">
       <Filter>Source\Resource Files</Filter>
     </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Source\Busines\FFmpegLogic.h">
+      <Filter>Source\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Depends\FFmepeg\include\libswresample\swresample.h">
+      <Filter>Depends\FFmepeg\libswresample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Depends\FFmepeg\include\libswscale\swscale.h">
+      <Filter>Depends\FFmepeg\libswscale</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
